@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stripe Redirect</title>
+  <script>
+    window.onload = function() {
+      var type = new URLSearchParams(window.location.search).get('type');
+      if (type === 'return') {
+        window.location.replace('ReturnURL://');
+      } else if (type === 'refresh') {
+        window.location.replace('RefreshURL://');
+      }
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
