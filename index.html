@@ -22,10 +22,10 @@
       var message = document.getElementById('message');
 
       if (type === 'return') {
-        message.innerText = 'Success! Please wait, you will be redirected shortly...';
+        message.innerText = 'Success! Please wait, you will be redirected shortly... If you are not redirected, please close this window manually.';
         window.location.replace('ReturnURL://');
       } else if (type === 'refresh') {
-        message.innerText = 'Failure, please try again. Please wait, you will be redirected shortly...';
+        message.innerText = 'Failure, please try again. Please wait, you will be redirected shortly... If you are not redirected, please close this window manually.';
         window.location.replace('RefreshURL://');
       }
 
