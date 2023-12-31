@@ -2,11 +2,24 @@
 <html>
 <head>
   <title>Stripe Redirect</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #message {
+      font-size: 24px;
+      text-align: center;
+    }
+  </style>
   <script>
     window.onload = function() {
       var type = new URLSearchParams(window.location.search).get('type');
-      var message = document.createElement('p');
-      document.body.appendChild(message);
+      var message = document.getElementById('message');
 
       if (type === 'return') {
         message.innerText = 'Success! Please wait, you will be redirected shortly...';
@@ -18,11 +31,11 @@
 
       setTimeout(function() {
         window.close();
-      }, 5000); // Increased the timeout to 5 seconds
+      }, 2000);
     }
   </script>
 </head>
 <body>
-  <!-- The paragraph element for the message is now included in the body -->
+  <div id="message"></div>
 </body>
 </html>
