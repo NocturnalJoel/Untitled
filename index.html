@@ -27,6 +27,14 @@
       } else if (type === 'refresh') {
         message.innerText = 'Failure, please try again. Please wait, you will be redirected shortly... If you are not redirected, please close this window manually.';
         window.location.replace('RefreshURL://');
+      } else if (type === 'success') {
+        message.innerText = 'Payment Successful! Please wait, you will be redirected shortly...';
+        // Redirect to your app's new success URL
+        window.location.replace('SuccessURL://');
+      } else if (type === 'cancel') {
+        message.innerText = 'Payment Canceled. Please wait, you will be redirected shortly...';
+        // Redirect to your app's new cancel URL
+        window.location.replace('CancelURL://');
       }
 
       setTimeout(function() {
